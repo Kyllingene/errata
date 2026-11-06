@@ -52,7 +52,7 @@ macro_rules! error {
 #[macro_export]
 macro_rules! error {
     ($($arg:tt)*) => {
-        std::panic::panic_any($crate::ErrataPanic(format!("\x1b[38;5;1m\x1b[1m{}\x1b[0m", format!($($arg)*))));
+        std::panic::panic_any($crate::ErrataPanic(format!("\x1b[38;5;1m\x1b[1m{}\x1b[0m", format!($($arg)*))))
     }
 }
 
